@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>致青春 - 初中毕业祝福</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #4F46E5;
+      --color-secondary: #10B981;
+      --color-accent: #F59E0B;
+      --font-inter: 'Inter', sans-serif;
+    }
+    
+    @utility fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    
+    @utility slide-up {
+      animation: slideUp 0.8s ease-out;
+    }
+    
+    @utility float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    body {
+      font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    
+    .blessing-card {
+      transition: all 0.3s ease;
+    }
+    
+    .blessing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- 顶部导航 -->
+  <header class="w-full py-4 px-6 bg-white/80 backdrop-blur-sm shadow-sm fixed top-0 z-50">
+    <div class="container mx-auto flex justify-center">
+      <h1 class="text-2xl md:text-3xl font-bold text-primary flex items-center">
+        <i class="fas fa-graduation-cap mr-2"></i>
+        <span>致青春·毕业季</span>
+      </h1>
+    </div>
+  </header>
+
+  <!-- 主内容区 -->
+  <main class="flex-grow pt-20 pb-16 px-4">
+    <div class="container mx-auto">
+      <!-- 欢迎横幅 -->
+      <section class="text-center mb-12 slide-up">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+          <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary mb-4">亲爱的初中毕业生</h2>
+          <p class="text-lg text-gray-600 mb-6">
+            三年时光，转瞬即逝，你们即将踏上新的征程<br>
+            这是一份专属的祝福，愿你未来星河璀璨，不负韶华
+          </p>
+          <button id="start-btn" class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            开启祝福 <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- 祝福卡片区域 -->
+      <section id="blessings-section" class="hidden">
+        <!-- 回忆篇 -->
+        <section class="mb-16 fade-in">
+          <h3 class="text-xl md:text-2xl font-bold text-primary mb-6 text-center">
+            <i class="fas fa-book-open mr-2"></i> 那些难忘的时光
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="blessing-card bg-white rounded-xl p-6 shadow-md">
+              <div class="text-accent text-3xl mb-4">
+                <i class="fas fa-school"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">教室的点滴</h4>
+              <p class="text-gray-600">
+                还记得教室窗边的阳光吗？那些一起埋头苦读的日子，
+                偷偷传过的纸条，课间十分钟的欢笑，都是青春最鲜活的印记。
+              </p>
+            </div>
+            <div class="blessing-card bg-white rounded-xl p-6 shadow-md">
+              <div class="text-accent text-3xl mb-4">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">同窗的友谊</h4>
+              <p class="text-gray-600">
+                感谢那些陪你笑、陪你闹、陪你解数学题的小伙伴，
+                即使未来各奔东西，这份情谊也会像星星一样，永远闪亮。
+              </p>
+            </div>
+            <div class="blessing-card bg-white rounded-xl p-6 shadow-md">
+              <div class="text-accent text-3xl mb-4">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">老师的教诲</h4>
+              <p class="text-gray-600">
+                "这道题还不懂？我再讲一遍"——那些曾经觉得啰嗦的话语，
+                如今想来都是最温暖的关怀，愿你带着这份教导，勇敢前行。
+              </p>
+            </div>
+            <div class="blessing-card bg-white rounded-xl p-6 shadow-md">
+              <div class="text-accent text-3xl mb-4">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">成长的印记</h4>
+              <p class="text-gray-600">
+                从第一次上台发言的紧张，到运动会上为班级拼搏的汗水，
+                每一次尝试和突破，都让你成为了更优秀的自己。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 祝福篇 -->
+        <section class="mb-16 fade-in" style="animation-delay: 0.2s;">
+          <h3 class="text-xl md:text-2xl font-bold text-primary mb-6 text-center">
+            <i class="fas fa-heart mr-2"></i> 给你的专属祝福
+          </h3>
+          <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg relative overflow-hidden">
+            <!-- 装饰元素 -->
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/10 rounded-full float"></div>
+            <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-primary/10 rounded-full float" style="animation-delay: 2s;"></div>
+            
+            <div class="text-center mb-8">
+              <img src="https://picsum.photos/seed/graduation1/200/200" alt="毕业祝福" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-4 shadow-lg float">
+              <h4 class="text-xl font-semibold text-gray-700">来自老师和同学的祝福</h4>
+            </div>
+            
+            <div id="blessing-container" class="min-h-40 mb-8">
+              <p class="text-lg text-gray-700 leading-relaxed">
+                "初中三年是人生中最纯真的时光，愿你永远保持这份纯粹，
+                对世界充满好奇，对生活充满热爱，未来的路，我们为你加油！"
+              </p>
+            </div>
+            
+            <button id="next-blessing" class="bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              查看下一条祝福 <i class="fas fa-heart ml-2"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- 未来篇 -->
+        <section class="fade-in" style="animation-delay: 0.4s;">
+          <h3 class="text-xl md:text-2xl font-bold text-primary mb-6 text-center">
+            <i class="fas fa-rocket mr-2"></i> 迎接新的征程
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl p-6 shadow-md text-center blessing-card">
+              <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-lightbulb text-2xl"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">保持好奇</h4>
+              <p class="text-gray-600">
+                世界很大，知识无穷，愿你永远保持对未知的好奇，
+                在探索中发现更广阔的天地。
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-md text-center blessing-card">
+              <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-shield-alt text-2xl"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">勇敢前行</h4>
+              <p class="text-gray-600">
+                成长路上难免遇到挫折，但请相信自己的力量，
+                每一次跌倒都是为了更好的起飞。
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-md text-center blessing-card">
+              <div class="w-16 h-16 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-smile text-2xl"></i>
+              </div>
+              <h4 class="text-lg font-semibold mb-3">记得微笑</h4>
+              <p class="text-gray-600">
+                生活需要阳光，愿你无论何时都能嘴角上扬，
+                用笑容面对挑战，让美好常伴左右。
+              </p>
+            </div>
+          </div>
+          
+          <!-- 签名板 -->
+          <div class="mt-10 bg-white rounded-xl p-6 shadow-md">
+            <h4 class="text-lg font-semibold mb-4 text-center">留下你的毕业签名</h4>
+            <div class="flex flex-col items-center">
+              <canvas id="signature" width="300" height="150" class="border-2 border-gray-200 rounded-lg mb-4"></canvas>
+              <div class="flex space-x-3">
+                <button id="clear-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-full transition-colors">
+                  清空 <i class="fas fa-eraser"></i>
+                </button>
+                <button id="save-btn" class="bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-full transition-colors">
+                  保存签名 <i class="fas fa-save"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- 结束祝福 -->
+      <section id="end-section" class="hidden fade-in">
+        <div class="bg-primary/5 rounded-2xl p-8 text-center shadow-lg">
+          <h2 class="text-2xl font-bold text-primary mb-4">毕业不是终点，而是新的起点</h2>
+          <p class="text-lg text-gray-600 mb-8">
+            愿你带着这份祝福，在未来的道路上<br>
+            眼里有光，心中有爱，脚下有远方
+          </p>
+          <div class="w-40 h-40 md:w-60 md:h-60 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 float">
+            <i class="fas fa-star text-4xl md:text-6xl text-primary"></i>
+          </div>
+          <button id="restart-btn" class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            再看一遍祝福 <i class="fas fa-redo-alt ml-2"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 底部信息 -->
+  <footer class="bg-white py-4 px-6 border-t">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      <p>致青春·初中毕业祝福软件 &copy; 2025</p>
+      <p class="mt-1">长按屏幕可保存到主屏幕</p>
+    </div>
+  </footer>
+
+  <!-- 图片保存弹窗 -->
+  <div id="save-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
+      <h3 class="text-xl font-bold text-primary mb-4 text-center">签名已保存</h3>
+      <div class="text-center mb-6">
+        <img id="saved-signature" src="" alt="保存的签名" class="max-w-full h-40 mx-auto rounded-lg shadow-md">
+      </div>
+      <button id="close-modal" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-full transition-colors">
+        知道了
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // 祝福数据
+    const blessings = [
+      "初中三年，你从懵懂少年成长为有理想的青年，愿你未来的日子里，所遇皆美好，所想皆成真。",
+      "毕业是新的开始，愿你带着初中的美好回忆，在高中的舞台上绽放更耀眼的光芒，加油！",
+      "那些一起奋斗的日夜，那些课间的欢声笑语，都将成为你人生中最珍贵的宝藏，愿你永远铭记。",
+      "未来的路可能有风雨，但请相信，你比想象中更强大，愿你披荆斩棘，走向属于自己的辉煌。",
+      "愿你保持善良，保持热情，保持对生活的热爱，无论走到哪里，都能成为那个闪闪发光的自己。",
+      "毕业不是离别，而是带着祝福继续前行，愿你在新的征程中，收获更多知识、友谊和成长。",
+      "初中的结束，是梦想的新起点，愿你以梦为马，不负韶华，在更广阔的天地里翱翔。",
+      "愿你的未来像彩虹一样绚烂，像星辰一样璀璨，所有努力都有回报，所有梦想都能实现。"
+    ];
+    let currentBlessing = 0;
+
+    // 页面加载完成后执行
+    document.addEventListener('DOMContentLoaded', function() {
+      // 签名板初始化
+      const canvas = document.getElementById('signature');
+      const ctx = canvas.getContext('2d');
+      let isDrawing = false;
+      let lastX = 0;
+      let lastY = 0;
+
+      // 开始绘制
+      canvas.addEventListener('mousedown', startDrawing);
+      canvas.addEventListener('touchstart', startDrawing, { passive: false });
+      
+      // 绘制中
+      canvas.addEventListener('mousemove', draw);
+      canvas.addEventListener('touchmove', draw, { passive: false });
+      
+      // 结束绘制
+      canvas.addEventListener('mouseup', stopDrawing);
+      canvas.addEventListener('touchend', stopDrawing);
+      
+      // 清空签名
+      document.getElementById('clear-btn').addEventListener('click', clearSignature);
+      
+      // 保存签名
+      document.getElementById('save-btn').addEventListener('click', saveSignature);
+      
+      // 关闭弹窗
+      document.getElementById('close-modal').addEventListener('click', function() {
+        document.getElementById('save-modal').classList.add('hidden');
+      });
+      
+      // 开始祝福按钮
+      document.getElementById('start-btn').addEventListener('click', function() {
+        document.getElementById('start-btn').parentElement.classList.add('hidden');
+        document.getElementById('blessings-section').classList.remove('hidden');
+      });
+      
+      // 下一条祝福按钮
+      document.getElementById('next-blessing').addEventListener('click', function() {
+        currentBlessing = (currentBlessing + 1) % blessings.length;
+        document.getElementById('blessing-container').innerHTML = `<p class="text-lg text-gray-700 leading-relaxed">${blessings[currentBlessing]}</p>`;
+        
+        // 如果是最后一条祝福，显示结束页面
+        if (currentBlessing === blessings.length - 1) {
+          document.getElementById('blessings-section').classList.add('hidden');
+          document.getElementById('end-section').classList.remove('hidden');
+        }
+      });
+      
+      // 重新开始按钮
+      document.getElementById('restart-btn').addEventListener('click', function() {
+        currentBlessing = 0;
+        document.getElementById('end-section').classList.add('hidden');
+        document.getElementById('blessings-section').classList.remove('hidden');
+        document.getElementById('blessing-container').innerHTML = `<p class="text-lg text-gray-700 leading-relaxed">${blessings[currentBlessing]}</p>`;
+        clearSignature(); // 清空签名
+      });
+    });
+
+    // 签名板功能
+    function startDrawing(e) {
+      isDrawing = true;
+      [lastX, lastY] = getCoordinates(e);
+      ctx.beginPath();
+    }
+
+    function draw(e) {
+      if (!isDrawing) return;
+      const [x, y] = getCoordinates(e);
+      drawLine(lastX, lastY, x, y);
+      [lastX, lastY] = [x, y];
+    }
+
+    function stopDrawing() {
+      isDrawing = false;
+      ctx.closePath();
+    }
+
+    function clearSignature() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function drawLine(x1, y1, x2, y2) {
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.lineWidth = 4;
+      ctx.strokeStyle = '#333';
+      ctx.lineCap = 'round';
+      ctx.stroke();
+    }
+
+    function getCoordinates(e) {
+      if (e.type.includes('mouse')) {
+        return [e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top];
+      } else if (e.type.includes('touch')) {
+        return [e.touches[0].clientX - canvas.getBoundingClientRect().left, e.touches[0].clientY - canvas.getBoundingClientRect().top];
+      }
+      return [0, 0];
+    }
+
+    function saveSignature() {
+      const imgData = canvas.toDataURL('image/png');
+      document.getElementById('saved-signature').src = imgData;
+      document.getElementById('save-modal').classList.remove('hidden');
+    }
+
+    // 提示用户可以保存到主屏幕（PWA功能）
+    window.addEventListener('beforeinstallprompt', function(e) {
+      e.preventDefault();
+      // 这里可以添加提示用户安装的逻辑
+    });
+  </script>
+</body>
+</html>
